@@ -1,0 +1,8 @@
+{
+  "name": "DevCrow",
+  "description": "Innovative Solutions, Seamless Experiences - A modern digital agency.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
