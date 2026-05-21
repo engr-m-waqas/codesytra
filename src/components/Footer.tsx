@@ -39,12 +39,12 @@ export default function Footer() {
               </a>
               <div className="flex gap-4 pt-2">
                 <a href="https://github.com/engr-m-waqas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <img src="/images/github-sign.png" alt="GitHub" className="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
+                  <img src="/images/github.png" alt="GitHub" className="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
                 </a>
                 <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <img src="/images/facebook.png" alt="Facebook" className="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
                 </a>
-                <a href="https://wa.me/923069377493" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <a href="https://wa.me/923069377493?text=Hello%20CodeSyntra!%20I%20am%20interested%20in%20discussing%20a%20new%20project%20with%20your%20team.%20Could%20we%20connect%3F" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                   <img src="/images/whatsapp.png" alt="WhatsApp" className="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
                 </a>
               </div>

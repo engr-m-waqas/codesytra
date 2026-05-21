@@ -722,7 +722,7 @@ export default function App() {
 
       {/* WhatsApp Chat Trigger */}
       <motion.a
-        href="https://wa.me/923069377493"
+        href="https://wa.me/923069377493?text=Hello%20CodeSyntra!%20I%20am%20interested%20in%20discussing%20a%20new%20project%20with%20your%20team.%20Could%20we%20connect%3F"
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.05 }}

@@ -92,7 +92,7 @@ export default function Navbar() {
           </a>
           <div className="flex justify-center gap-3">
             <a href="https://github.com/engr-m-waqas" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all">
-              <img src="/images/github-sign.png" alt="GitHub" className="w-4 h-4 opacity-70 hover:opacity-100" />
+              <img src="/images/github.png" alt="GitHub" className="w-4 h-4 opacity-70 hover:opacity-100" />
             </a>
             <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all">
               <img src="/images/facebook.png" alt="Facebook" className="w-4 h-4 opacity-70 hover:opacity-100" />
