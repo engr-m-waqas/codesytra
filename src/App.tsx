@@ -482,34 +482,13 @@ export default function App() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
             >
               <span className="text-accent font-bold text-sm uppercase tracking-[0.2em] mb-3 block">Get In Touch</span>
               <h2 className="text-white mb-3 md:mb-5">Let's Discuss Your Next <br className="hidden sm:block" />Big Collaboration</h2>
               <p className="text-slate-400 text-xs md:text-base mb-4 md:mb-6 max-w-md">Our team is ready to help you navigate your digital journey. Reach out for a free consultation.</p>
 
               <div className="space-y-5">
-                {/* Office Address */}
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-500 uppercase font-black">Office Address</p>
-                    <p className="text-sm md:text-lg font-bold">Vehari, Pakistan</p>
-                  </div>
-                </div>
-
-                {/* Phone Number */}
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
-                    <Phone size={20} className="text-accent group-hover:scale-110 transition-transform" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-500 uppercase font-black">Phone Number</p>
-                    <a href="tel:+923069377493" className="text-sm md:text-lg font-bold hover:text-accent transition-colors">+92 306 9377493</a>
-                  </div>
-                </div>
-
                 {/* Email Address */}
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
@@ -521,14 +500,36 @@ export default function App() {
                   </div>
                 </div>
 
+                {/* Phone Number */}
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
+                    <img src="/images/phone.png" alt="Phone" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-black">Phone Number</p>
+                    <a href="tel:+923069377493" className="text-sm md:text-lg font-bold hover:text-accent transition-colors">+92 306 9377493</a>
+                  </div>
+                </div>
+
                 {/* Working Hours */}
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                    <img src="/images/working-time.png" alt="Working Hours" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 uppercase font-black">Working Hours</p>
                     <p className="text-sm md:text-lg font-bold">Mon – Sat: 9:00 AM – 6:00 PM</p>
+                  </div>
+                </div>
+
+                {/* Office Address */}
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
+                    <img src="/images/map.png" alt="Location" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-black">Office Address</p>
+                    <p className="text-sm md:text-lg font-bold">Vehari, Pakistan</p>
                   </div>
                 </div>
               </div>
@@ -539,7 +540,7 @@ export default function App() {
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-white/[0.02] p-6 sm:p-8 md:p-10 rounded-3xl text-white shadow-2xl border border-white/10 backdrop-blur-md relative overflow-hidden"
+              className="order-1 lg:order-2 bg-white/[0.02] p-6 sm:p-8 md:p-10 rounded-3xl text-white shadow-2xl border border-white/10 backdrop-blur-md relative overflow-hidden"
             >
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
               
