@@ -175,7 +175,7 @@ export default function App() {
               <div className="absolute -inset-20 bg-gradient-to-r from-accent to-fuchsia900 rounded-[15rem] blur opacity-10 group-hover:opacity-200 transition duration-10 group-hover:duration-00"></div>
               <div className="relative bg-slate-900/100 rounded-[2.5rem] p-0 border border-white/5 backdrop-blur-x1">
                 <img
-                  src="/src/assets/images/tech_hero_illustration_1779092670709.png"
+                  src="/images/tech_hero_illustration_1779092670709.png"
                   alt="Tech Innovation"
                   className="rounded-[4rem] w-full h-auto shadow-2xl"
                   referrerPolicy="no-referrer"

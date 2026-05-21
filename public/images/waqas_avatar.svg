@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" fill="#F4F7F9"/>
+  
+  <!-- Shirt -->
+  <path d="M45 190 C45 140 70 110 100 110 C130 110 155 140 155 190 Z" fill="#6B8CB0"/>
+
+  <!-- Neck -->
+  <rect x="85" y="90" width="24" height="35" fill="#F1C29F"/>
+
+  <!-- Face -->
+  <ellipse cx="100" cy="75" rx="30" ry="40" fill="#F1C29F"/>
+
+  <!-- Hair -->
+  <path d="M70 70 C70 25 130 25 130 70 C130 40 70 40 70 70" fill="#1D2735"/>
+  <path d="M68 65 C68 65 95 20 132 65 C132 65 130 35 100 35 C70 35 68 65 68 65" fill="#1D2735"/>
+  <!-- Small hair spike -->
+  <path d="M100 25 L105 35 L95 35 Z" fill="#1D2735"/>
+
+  <!-- Eyes -->
+  <circle cx="90" cy="70" r="3" fill="#1D2735"/>
+  <circle cx="115" cy="70" r="3" fill="#1D2735"/>
+  
+  <!-- Eyebrows -->
+  <path d="M85 62 Q90 58 95 62" fill="none" stroke="#1D2735" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M110 62 Q115 58 120 62" fill="none" stroke="#1D2735" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M105 75 L108 85 L105 85" fill="none" stroke="#D39673" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Smile -->
+  <path d="M98 92 Q105 95 110 90" fill="none" stroke="#D39673" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Hand on chin (thinking) -->
+  <path d="M95 110 C85 130 80 160 70 190" stroke="#6B8CB0" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <circle cx="95" cy="110" r="14" fill="#F1C29F"/>
+  <!-- Fingers -->
+  <path d="M85 100 C85 90 95 90 95 100" stroke="#F1C29F" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- Laptop -->
+  <path d="M90 145 L180 145 L170 190 L80 190 Z" fill="#415770"/>
+  <circle cx="135" cy="165" r="5" fill="#A8C2DC"/>
+
+  <!-- Floating SEO Icon -->
+  <g transform="translate(15, 30)">
+    <rect x="0" y="0" width="45" height="25" rx="3" fill="#DFEAF2"/>
+    <rect x="0" y="0" width="45" height="6" fill="#A8C2DC"/>
+    <circle cx="5" cy="3" r="1.5" fill="#FFFFFF"/>
+    <circle cx="10" cy="3" r="1.5" fill="#FFFFFF"/>
+    <text x="22" y="20" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="10" fill="#415770">SEO</text>
+    <!-- Magnifying Glass -->
+    <circle cx="35" cy="5" r="8" fill="none" stroke="#415770" stroke-width="2.5"/>
+    <line x1="40" y1="10" x2="48" y2="18" stroke="#415770" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating Megaphone -->
+  <g transform="translate(75, 20)">
+    <path d="M10 20 L30 10 L30 30 Z" fill="#415770"/>
+    <path d="M5 15 C5 10 15 10 15 15 C15 20 5 20 5 15" fill="#6B8CB0"/>
+    <rect x="15" y="25" width="6" height="15" rx="2" fill="#415770" transform="rotate(-20 15 25)"/>
+  </g>
+
+  <!-- Floating Chart -->
+  <g transform="translate(130, 45)">
+    <rect x="0" y="25" width="8" height="15" fill="#415770"/>
+    <rect x="12" y="15" width="8" height="25" fill="#6B8CB0"/>
+    <rect x="24" y="5" width="8" height="35" fill="#415770"/>
+    <!-- Line chart -->
+    <path d="M4 15 L16 5 L28 -10 L40 -20" fill="none" stroke="#415770" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M35 -20 L40 -20 L40 -15" fill="none" stroke="#415770" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>
