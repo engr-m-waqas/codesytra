@@ -234,4 +234,5 @@ const TechIcon = memo(({ name, size = 28 }: TechIconProps) => {
       {icon ?? <FallbackIcon name={name} color="#64748b" />}
     </span>
   );
-}
+});
+export default TechIcon;
