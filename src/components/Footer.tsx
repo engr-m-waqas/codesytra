@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Twitter, Linkedin, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -36,11 +36,19 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Connect</h4>
             <div className="space-y-3">
               <p className="text-sm text-slate-400">Lahore, Pakistan</p>
-              <p className="text-sm text-slate-400 font-mono break-all">hello@codesyntra.pk</p>
+              <a href="mailto:muhammadengrwaqas@gmail.com" className="text-sm text-slate-400 font-mono break-all hover:text-accent transition-colors block">
+                hello@codesyntra.pk
+              </a>
               <div className="flex gap-4 pt-2">
-                <Github size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
-                <Twitter size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
-                <Linkedin size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
+                <a href="https://github.com/engr-m-waqas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Github size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
+                </a>
+                <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <Facebook size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <Linkedin size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
+                </a>
               </div>
             </div>
           </div>
