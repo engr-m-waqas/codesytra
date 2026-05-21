@@ -487,14 +487,48 @@ export default function App() {
               <h2 className="text-white mb-3 md:mb-5">Let's Discuss Your Next <br className="hidden sm:block" />Big Collaboration</h2>
               <p className="text-slate-400 text-xs md:text-base mb-4 md:mb-6 max-w-md">Our team is ready to help you navigate your digital journey. Reach out for a free consultation.</p>
 
-              <div className="space-y-6">
+              <div className="space-y-5">
+                {/* Office Address */}
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-black">Office Address</p>
+                    <p className="text-sm md:text-lg font-bold">Vehari, Pakistan</p>
+                  </div>
+                </div>
+
+                {/* Phone Number */}
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
+                    <Phone size={20} className="text-accent group-hover:scale-110 transition-transform" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-black">Phone Number</p>
+                    <a href="tel:+923069377493" className="text-sm md:text-lg font-bold hover:text-accent transition-colors">+92 306 9377493</a>
+                  </div>
+                </div>
+
+                {/* Email Address */}
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
                     <img src="/images/communication.png" alt="Email" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-500 uppercase font-black">Email Us</p>
-                    <p className="text-sm md:text-lg font-bold break-all">codesyntraa@gmail.com</p>
+                    <p className="text-xs text-slate-500 uppercase font-black">Email Address</p>
+                    <a href="mailto:codesyntraa@gmail.com" className="text-sm md:text-lg font-bold break-all hover:text-accent transition-colors">codesyntraa@gmail.com</a>
+                  </div>
+                </div>
+
+                {/* Working Hours */}
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-black">Working Hours</p>
+                    <p className="text-sm md:text-lg font-bold">Mon – Sat: 9:00 AM – 6:00 PM</p>
                   </div>
                 </div>
               </div>
