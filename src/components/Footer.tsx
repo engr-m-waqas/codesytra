@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Github, Twitter, Facebook, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -46,8 +46,8 @@ export default function Footer() {
                 <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <Facebook size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
                 </a>
-                <a href="#" aria-label="LinkedIn">
-                  <Linkedin size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
+                <a href="https://wa.me/923069377493" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                  <Phone size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
                 </a>
               </div>
             </div>
