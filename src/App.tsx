@@ -134,7 +134,7 @@ export default function App() {
               We combine elite design, modern development, and powerful backend architecture to create experiences that drive growth.
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 md:gap-3 mb-6 md:mb-8">
+            <div className="hidden lg:flex flex-col sm:flex-row flex-wrap gap-2.5 md:gap-3 mb-6 md:mb-8">
               <a
                 href="#contact"
                 className="px-5 md:px-6 py-3 md:py-3.5 bg-accent text-black font-black rounded-xl hover:bg-white hover:scale-105 transition-all shadow-lg shadow-accent/10 flex items-center justify-center gap-2 uppercase tracking-wider text-xs md:text-sm"
@@ -169,6 +169,22 @@ export default function App() {
                   className="rounded-[1.9rem] md:rounded-[2.4rem] w-full h-auto object-cover aspect-video sm:aspect-auto"
                 />
               </div>
+            </div>
+
+            {/* Mobile-only CTA Buttons (shown below animation on smaller viewports) */}
+            <div className="flex lg:hidden flex-col sm:flex-row flex-wrap gap-3 mt-8 w-full relative z-20">
+              <a
+                href="#contact"
+                className="px-5 py-3.5 bg-accent text-black font-black rounded-xl hover:bg-white active:scale-95 transition-all shadow-lg shadow-accent/10 flex items-center justify-center gap-2 uppercase tracking-wider text-xs"
+              >
+                Start Your Project <ArrowRight size={18} />
+              </a>
+              <a
+                href="#services"
+                className="px-5 py-3.5 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center uppercase tracking-wider text-xs"
+              >
+                Our Capabilities
+              </a>
             </div>
 
             {/* Abstract Elements */}
