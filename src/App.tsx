@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import SectionDivider from "./components/SectionDivider";
 import TechIcon from "./components/TechIcon";
 import { TEAM_MEMBERS, SERVICES } from "./constants";
-import { MessageSquare, ArrowRight, Github, Twitter, Linkedin, Mail, Cpu, Layers, Search, Zap, Smartphone, Users, Loader2, ExternalLink, User, Briefcase, DollarSign, PenTool, ChevronDown, Phone } from "lucide-react";
+import { ArrowRight, Mail, Cpu, Layers, Search, Zap, Smartphone, Users, Loader2, ExternalLink, User, Briefcase, DollarSign, PenTool, ChevronDown, Phone } from "lucide-react";
 import React, { useRef, useState } from "react";
 
 export default function App() {
