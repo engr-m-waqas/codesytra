@@ -108,7 +108,7 @@ export default function App() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative flex flex-col justify-between pt-16 md:pt-36 overflow-hidden">
+      <section className="relative flex flex-col justify-between pt-28 sm:pt-32 md:pt-36 overflow-hidden">
         {/* Background Glows */}
         <div className="absolute top-1/4 left-1/4 w-48 md:w-96 h-48 md:h-96 bg-accent/20 rounded-full blur-[80px] md:blur-[120px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-48 md:w-96 h-48 md:h-96 bg-fuchsia-500/10 rounded-full blur-[80px] md:blur-[120px] animate-pulse delay-1000" />
@@ -123,6 +123,7 @@ export default function App() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="pt-4 lg:pt-0"
           >
 
             <h1 className="mb-2 md:mb-3 text-white text-[22px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight glow-text">
