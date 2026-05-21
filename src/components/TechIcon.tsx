@@ -1,5 +1,5 @@
 // SVG Tech Icons - inline SVGs for common tech stacks
-import React from "react";
+import React, { memo } from "react";
 
 interface TechIconProps {
   name: string;
@@ -224,7 +224,7 @@ function FallbackIcon({ name, color }: { name: string; color: string }) {
   );
 }
 
-export default function TechIcon({ name, size = 28 }: TechIconProps) {
+const TechIcon = memo(({ name, size = 28 }: TechIconProps) => {
   const icon = icons[name];
   return (
     <span
