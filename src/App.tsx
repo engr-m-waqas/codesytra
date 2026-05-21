@@ -124,20 +124,6 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="mb-5 md:mb-8 inline-flex items-center gap-2 md:gap-3 px-4 md:px-5 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md"
-            >
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map(i => (
-                  <div key={i} className="w-6 h-6 rounded-full border border-bg bg-accent/20 flex items-center justify-center text-[8px] font-bold">
-                    {i === 1 ? 'JS' : i === 2 ? 'TS' : 'RE'}
-                  </div>
-                ))}
-              </div>
-              <span className="text-xs font-bold uppercase tracking-widest text-accent">Next-Gen Development</span>
-            </motion.div>
 
             <h1 className="mb-2 md:mb-3 text-white text-[22px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight glow-text">
               FROM IDEA TO IMPACT <br />
