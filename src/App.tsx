@@ -163,7 +163,6 @@ export default function App() {
               <div className="relative bg-slate-900/80 rounded-[1.5rem] md:rounded-[2.5rem] p-0.5 border border-white/10 backdrop-blur-xl overflow-hidden shadow-2xl">
                 <video
                   src="/images/hero_animation.mp4"
-                  poster="/images/tech_hero_illustration_1779092670709.png"
                   autoPlay
                   loop
                   muted
