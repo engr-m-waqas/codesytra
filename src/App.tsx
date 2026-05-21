@@ -104,7 +104,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-animated-gradient selection:bg-accent selection:text-black overflow-x-hidden text-white">
+    <div className="relative min-h-screen bg-animated-gradient selection:bg-accent selection:text-black overflow-x-clip text-white">
       <Navbar />
 
       {/* Hero Section */}
