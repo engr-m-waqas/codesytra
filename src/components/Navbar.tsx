@@ -9,9 +9,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 flex justify-between items-center h-14 md:h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group shrink-0" onClick={() => setIsOpen(false)}>
-          <div className="w-8 h-8 md:w-9 md:h-9 bg-accent rounded-lg md:rounded-xl flex items-center justify-center rotate-3 group-hover:rotate-0 transition-transform">
-            <span className="text-black text-xs md:text-sm font-black italic">CS</span>
-          </div>
+          <img src="/images/logo.png" alt="CodeSyntra Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-105 transition-transform bg-white rounded-full p-1" />
           <div className="flex flex-col leading-none">
             <span className="text-base md:text-lg font-black text-white tracking-tighter">CodeSyntra</span>
             <span className="text-[8px] md:text-[9px] font-bold text-accent uppercase tracking-widest">Agency</span>
