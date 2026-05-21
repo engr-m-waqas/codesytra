@@ -50,7 +50,7 @@ export const TEAM_MEMBERS = [
   {
     id: "waqas-lead",
     name: "Muhammad Waqas",
-    role: "Backend - Node.js, EXPRESS JS MONGOOSE DB, SEO, GITHUB, DEVELOPMENT VERCEL RENDER",
+    role: "Backend - Node.js, EXPRESS JS MONGOOSE DB, SEO, GITHUB, DEVELOPMENT Application",
     exp: "1 Year Exp.",
     avatar: "MW",
     avatarImg: "/images/m_waqas.jpg",
