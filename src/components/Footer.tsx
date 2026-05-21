@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Connect</h4>
             <div className="space-y-3">
-              <p className="text-sm text-slate-400">Lahore, Pakistan</p>
+              <p className="text-sm text-slate-400">Vehari, Pakistan</p>
               <a href="mailto:codesyntraa@gmail.com" className="text-sm text-slate-400 font-mono break-all hover:text-accent transition-colors block">
                 codesyntraa@gmail.com
               </a>
