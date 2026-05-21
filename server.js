@@ -61,7 +61,7 @@ app.post('/api/contact', async (req, res) => {
     // Setup email data
     const mailOptions = {
       from: `"CodeSyntra Project Desk" <${transporter.options.auth?.user}>`,
-      to: process.env.EMAIL_TO || transporter.options.auth?.user || 'hello@codesyntra.pk',
+      to: process.env.EMAIL_TO || transporter.options.auth?.user || 'codesyntraa@gmail.com',
       replyTo: email,
       subject: `🚀 New Project Request: ${projectType} from ${name}`,
       html: `

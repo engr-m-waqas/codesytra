@@ -489,12 +489,12 @@ export default function App() {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent border border-white/10 hover:bg-accent hover:text-black transition-colors cursor-pointer group">
-                    <Mail size={20} className="group-hover:scale-110 transition-transform" />
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group">
+                    <img src="/images/communication.png" alt="Email" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 uppercase font-black">Email Us</p>
-                    <p className="text-sm md:text-lg font-bold break-all">hello@codesyntra.pk</p>
+                    <p className="text-sm md:text-lg font-bold break-all">codesyntraa@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -720,14 +720,18 @@ export default function App() {
         </div>
       </section>
 
-      {/* Live Chat Trigger */}
-      <motion.button
-        whileHover={{ scale: 1.1, rotate: 5 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 md:bottom-12 md:right-12 w-14 h-14 md:w-20 md:h-20 bg-accent text-black rounded-2xl md:rounded-[2rem] shadow-2xl flex items-center justify-center z-50 hover:bg-accent-hover transition-colors group"
+      {/* WhatsApp Chat Trigger */}
+      <motion.a
+        href="https://wa.me/923069377493"
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-6 right-6 md:bottom-12 md:right-12 h-14 md:h-16 px-4 md:px-6 bg-[#25D366] text-white rounded-full shadow-2xl shadow-[#25D366]/20 flex items-center justify-center gap-2 md:gap-3 z-50 hover:bg-[#20bd5a] transition-all group"
       >
-        <MessageSquare className="w-6 h-6 md:w-9 md:h-9 transition-transform" />
-      </motion.button>
+        <img src="/images/whatsapp.png" alt="WhatsApp" className="w-6 h-6 md:w-7 md:h-7 group-hover:animate-bounce object-contain" />
+        <span className="font-bold text-sm md:text-base hidden sm:block">Chat on WhatsApp</span>
+      </motion.a>
 
       <Footer />
     </div>

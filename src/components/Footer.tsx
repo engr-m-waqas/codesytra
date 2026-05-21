@@ -9,9 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center shrink-0">
-                <span className="text-black text-xs font-black">C</span>
-              </div>
+              <img src="/images/Gemini_Generated_Image_b2301sb2301sb230.png" alt="CodeSyntra Logo" className="w-8 h-8 object-cover rounded-lg shrink-0" />
               <span className="text-xl font-bold tracking-tight text-white">CodeSyntra</span>
             </div>
             <p className="text-slate-400 max-w-sm leading-relaxed text-sm">
@@ -36,18 +34,18 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Connect</h4>
             <div className="space-y-3">
               <p className="text-sm text-slate-400">Lahore, Pakistan</p>
-              <a href="mailto:muhammadengrwaqas@gmail.com" className="text-sm text-slate-400 font-mono break-all hover:text-accent transition-colors block">
-                hello@codesyntra.pk
+              <a href="mailto:codesyntraa@gmail.com" className="text-sm text-slate-400 font-mono break-all hover:text-accent transition-colors block">
+                codesyntraa@gmail.com
               </a>
               <div className="flex gap-4 pt-2">
                 <a href="https://github.com/engr-m-waqas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Github size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
+                  <img src="/images/github-sign.png" alt="GitHub" className="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
                 </a>
                 <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  <Facebook size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
+                  <img src="/images/facebook.png" alt="Facebook" className="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
                 </a>
                 <a href="https://wa.me/923069377493" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                  <Phone size={18} className="text-slate-500 hover:text-accent cursor-pointer transition-colors" />
+                  <img src="/images/whatsapp.png" alt="WhatsApp" className="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
                 </a>
               </div>
             </div>

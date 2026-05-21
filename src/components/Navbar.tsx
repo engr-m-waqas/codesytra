@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 flex justify-between items-center h-14 md:h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group shrink-0" onClick={() => setIsOpen(false)}>
-          <img src="/images/logo.png" alt="CodeSyntra Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-105 transition-transform bg-white rounded-full p-1" />
+          <img src="/images/Gemini_Generated_Image_b2301sb2301sb230.png" alt="CodeSyntra Logo" className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-xl group-hover:scale-105 transition-transform" />
           <div className="flex flex-col leading-none">
             <span className="text-base md:text-lg font-black text-white tracking-tighter">CodeSyntra</span>
             <span className="text-[8px] md:text-[9px] font-bold text-accent uppercase tracking-widest">Agency</span>
@@ -87,18 +87,15 @@ export default function Navbar() {
         {/* Mobile Menu Footer */}
         <div className="relative z-10 mt-auto pt-6 pb-2 flex flex-col items-center text-center">
           <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Get in touch</p>
-          <a href="mailto:muhammadengrwaqas@gmail.com" className="text-sm font-bold text-white block mb-4 hover:text-accent transition-colors">
-            hello@codesyntra.pk
+          <a href="mailto:codesyntraa@gmail.com" className="text-sm font-bold text-white block mb-4 hover:text-accent transition-colors">
+            codesyntraa@gmail.com
           </a>
           <div className="flex justify-center gap-3">
-            <a href="https://github.com/engr-m-waqas" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-accent hover:text-black transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <a href="https://github.com/engr-m-waqas" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all">
+              <img src="/images/github-sign.png" alt="GitHub" className="w-4 h-4 opacity-70 hover:opacity-100" />
             </a>
-            <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-accent hover:text-black transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-accent hover:text-black transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all">
+              <img src="/images/facebook.png" alt="Facebook" className="w-4 h-4 opacity-70 hover:opacity-100" />
             </a>
           </div>
         </div>

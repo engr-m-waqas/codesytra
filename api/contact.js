@@ -32,7 +32,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: `"CodeSyntra Project Desk" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_TO || process.env.EMAIL_USER || 'hello@codesyntra.pk',
+      to: process.env.EMAIL_TO || process.env.EMAIL_USER || 'codesyntraa@gmail.com',
       replyTo: email,
       subject: `🚀 New Project Request: ${projectType} from ${name}`,
       html: `
