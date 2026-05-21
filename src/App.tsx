@@ -108,7 +108,7 @@ export default function App() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative flex flex-col justify-between pt-28 sm:pt-32 md:pt-36 overflow-hidden">
+      <section className="relative flex flex-col justify-between pt-20 sm:pt-24 md:pt-36 overflow-hidden">
         {/* Background Glows */}
         <div className="absolute top-1/4 left-1/4 w-48 md:w-96 h-48 md:h-96 bg-accent/20 rounded-full blur-[80px] md:blur-[120px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-48 md:w-96 h-48 md:h-96 bg-fuchsia-500/10 rounded-full blur-[80px] md:blur-[120px] animate-pulse delay-1000" />
@@ -118,12 +118,12 @@ export default function App() {
         <div className="absolute bottom-1/4 left-[5%] text-[8vw] font-black opacity-[0.02] select-none pointer-events-none -rotate-12">REACH</div>
         <div className="absolute top-1/4 left-[40%] text-[5vw] font-black opacity-[0.04] select-none pointer-events-none">CSS3</div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center relative z-10 pb-6 md:pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center relative z-10 pb-6 md:pb-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="pt-4 lg:pt-0"
+            className="pt-2 lg:pt-0"
           >
 
             <h1 className="mb-2 md:mb-3 text-white text-[22px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight glow-text">
@@ -131,7 +131,7 @@ export default function App() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-fuchsia-400">WE BUILD DIGITAL PRODUCTS THAT SCALE</span>
             </h1>
 
-            <p className="text-sm md:text-lg text-slate-400 mb-5 md:mb-8 max-w-xl leading-relaxed">
+            <p className="text-sm md:text-lg text-slate-400 mb-4 md:mb-8 max-w-xl leading-relaxed">
               We combine elite design, modern development, and powerful backend architecture to create experiences that drive growth.
             </p>
 
@@ -153,36 +153,36 @@ export default function App() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="block relative w-full mt-6 lg:mt-0"
+            className="block relative w-full max-w-[280px] sm:max-w-md lg:max-w-none mx-auto mt-2 lg:mt-0"
           >
             <div className="relative z-10 floating">
-              <div className="absolute -inset-10 md:-inset-20 bg-gradient-to-r from-accent to-fuchsia-900 rounded-[10rem] md:rounded-[15rem] blur opacity-15 group-hover:opacity-25 transition duration-1000"></div>
-              <div className="relative bg-slate-900/80 rounded-[2rem] md:rounded-[2.5rem] p-0.5 border border-white/10 backdrop-blur-xl overflow-hidden shadow-2xl">
+              <div className="absolute -inset-6 md:-inset-20 bg-gradient-to-r from-accent to-fuchsia-900 rounded-[8rem] md:rounded-[15rem] blur opacity-15 group-hover:opacity-25 transition duration-1000"></div>
+              <div className="relative bg-slate-900/80 rounded-[1.5rem] md:rounded-[2.5rem] p-0.5 border border-white/10 backdrop-blur-xl overflow-hidden shadow-2xl">
                 <video
                   src="/images/hero_animation.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="rounded-[1.9rem] md:rounded-[2.4rem] w-full h-auto object-cover aspect-video sm:aspect-auto"
+                  className="rounded-[1.4rem] md:rounded-[2.4rem] w-full h-auto object-cover aspect-video sm:aspect-auto"
                 />
               </div>
             </div>
 
             {/* Mobile-only CTA Buttons (shown below animation on smaller viewports) */}
-            <div className="flex lg:hidden flex-col sm:flex-row flex-wrap gap-3 mt-8 w-full relative z-20">
+            <div className="flex lg:hidden flex-col sm:flex-row flex-wrap gap-2.5 mt-4 w-full relative z-20">
               <a
                 href="#contact"
-                className="px-5 py-3.5 bg-accent text-black font-black rounded-xl hover:bg-white active:scale-95 transition-all shadow-lg shadow-accent/10 flex items-center justify-center gap-2 uppercase tracking-wider text-xs"
+                className="px-5 py-3 bg-accent text-black font-black rounded-xl hover:bg-white active:scale-95 transition-all shadow-lg shadow-accent/10 flex items-center justify-center gap-2 uppercase tracking-wider text-xs"
               >
-                Start Your Project <ArrowRight size={18} />
+                Start Your Project <ArrowRight size={16} />
               </a>
               <a
                 href="#services"
-                className="px-5 py-3.5 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center uppercase tracking-wider text-xs"
+                className="px-5 py-3 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center uppercase tracking-wider text-xs"
               >
                 Our Capabilities
               </a>
