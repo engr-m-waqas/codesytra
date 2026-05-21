@@ -155,23 +155,25 @@ export default function App() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="hidden lg:block relative"
+            className="block relative w-full mt-6 lg:mt-0"
           >
-            <div className="relative z-100 floating">
-              <div className="absolute -inset-20 bg-gradient-to-r from-accent to-fuchsia900 rounded-[15rem] blur opacity-10 group-hover:opacity-200 transition duration-10 group-hover:duration-00"></div>
-              <div className="relative bg-slate-900/100 rounded-[2.5rem] p-0 border border-white/5 backdrop-blur-x1">
-                <img
-                  src="/images/tech_hero_illustration_1779092670709.png"
-                  alt="Tech Innovation"
-                  className="rounded-[4rem] w-full h-auto shadow-2xl"
-                  referrerPolicy="no-referrer"
+            <div className="relative z-10 floating">
+              <div className="absolute -inset-10 md:-inset-20 bg-gradient-to-r from-accent to-fuchsia-900 rounded-[10rem] md:rounded-[15rem] blur opacity-15 group-hover:opacity-25 transition duration-1000"></div>
+              <div className="relative bg-slate-900/80 rounded-[2rem] md:rounded-[2.5rem] p-0.5 border border-white/10 backdrop-blur-xl overflow-hidden shadow-2xl">
+                <video
+                  src="/images/hero_animation.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="rounded-[1.9rem] md:rounded-[2.4rem] w-full h-auto object-cover aspect-video sm:aspect-auto"
                 />
               </div>
             </div>
 
             {/* Abstract Elements */}
-            <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent/20 rounded-full blur-[100px]" />
-            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-fuchsia-200/20 rounded-full blur-[100px]" />
+            <div className="absolute -top-10 md:-top-20 -right-10 md:-right-20 w-48 md:w-64 h-48 md:h-64 bg-accent/20 rounded-full blur-[80px] md:blur-[100px] pointer-events-none" />
+            <div className="absolute -bottom-10 md:-bottom-20 -left-10 md:-left-20 w-48 md:w-64 h-48 md:h-64 bg-fuchsia-200/20 rounded-full blur-[80px] md:blur-[100px] pointer-events-none" />
           </motion.div>
         </div>
 
