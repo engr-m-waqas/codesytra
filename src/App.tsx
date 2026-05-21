@@ -482,7 +482,6 @@ export default function App() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-2 lg:order-1"
             >
               <span className="text-accent font-bold text-sm uppercase tracking-[0.2em] mb-3 block">Get In Touch</span>
               <h2 className="text-white mb-3 md:mb-5">Let's Discuss Your Next <br className="hidden sm:block" />Big Collaboration</h2>
@@ -540,7 +539,7 @@ export default function App() {
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="order-1 lg:order-2 bg-white/[0.02] p-6 sm:p-8 md:p-10 rounded-3xl text-white shadow-2xl border border-white/10 backdrop-blur-md relative overflow-hidden"
+              className="bg-white/[0.02] p-6 sm:p-8 md:p-10 rounded-3xl text-white shadow-2xl border border-white/10 backdrop-blur-md relative overflow-hidden"
             >
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
               
