@@ -25,5 +25,29 @@ export default defineConfig(({mode}) => {
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
+    build: {
+      // Target modern browsers — smaller bundle output
+      target: 'es2020',
+      // Minify with esbuild (fast) for JS
+      minify: 'esbuild',
+      // Split vendor chunks for better browser caching
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-vendor':  ['react', 'react-dom'],
+            'motion-vendor': ['motion'],
+            'lucide-vendor': ['lucide-react'],
+          },
+        },
+        // Remove unused code
+        treeshake: {
+          moduleSideEffects: false,
+        },
+      },
+      // Warn if any chunk exceeds 500 KB
+      chunkSizeWarningLimit: 500,
+      // Enable CSS code splitting per chunk
+      cssCodeSplit: true,
+    },
   };
 });

@@ -1,17 +1,89 @@
 import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import Navbar from "./components/Navbar";
-import TeamMember from "./components/TeamMember";
-import ServiceCard from "./components/ServiceCard";
-import Footer from "./components/Footer";
-import SectionDivider from "./components/SectionDivider";
 import TechIcon from "./components/TechIcon";
 import { TEAM_MEMBERS, SERVICES } from "./constants";
 import { ArrowRight, Mail, Cpu, Layers, Search, Zap, Smartphone, Users, Loader2, ExternalLink, User, Briefcase, DollarSign, PenTool, ChevronDown, Phone } from "lucide-react";
-import React, { useRef, useState } from "react";
+import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
+
+// Lazy load ONLY below-fold heavy components — Navbar & Hero are always immediate
+const TeamMember     = lazy(() => import("./components/TeamMember"));
+const ServiceCard    = lazy(() => import("./components/ServiceCard"));
+const Footer         = lazy(() => import("./components/Footer"));
+const SectionDivider = lazy(() => import("./components/SectionDivider"));
+
+// Lightweight skeleton shown while lazy sections load
+const SectionSkeleton = () => (
+  <div className="w-full py-20 px-4 flex flex-col items-center gap-6 animate-pulse">
+    <div className="h-4 w-32 rounded-full bg-white/5" />
+    <div className="h-8 w-64 rounded-xl bg-white/5" />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl mt-4">
+      {[...Array(3)].map((_, i) => (
+        <div key={i} className="h-40 rounded-2xl bg-white/[0.03] border border-white/5" />
+      ))}
+    </div>
+  </div>
+);
+
+// Lazy-load video only when it enters the viewport (fixes Vercel large-file issues)
+function LazyVideo({ src, className }: { src: string; className: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const video = videoRef.current;
+          if (video && !video.src) {
+            video.src = src;
+            video.load();
+          }
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' } // start loading 200px before entering view
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [src]);
+
+  return (
+    <div ref={wrapperRef} className="relative w-full" style={{ aspectRatio: '16/9' }}>
+      {/* Placeholder shown until video is ready */}
+      {!isLoaded && (
+        <div
+          className="absolute inset-0 rounded-[1.4rem] md:rounded-[2.4rem] flex items-center justify-center"
+          style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #020617 100%)' }}
+        >
+          <div className="flex flex-col items-center gap-3 opacity-40">
+            <div className="w-12 h-12 rounded-full border-2 border-accent/40 border-t-accent animate-spin" />
+            <span className="text-xs text-slate-500 font-bold uppercase tracking-widest">Loading...</span>
+          </div>
+        </div>
+      )}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="none"
+        onCanPlay={() => setIsLoaded(true)}
+        className={className}
+        style={{ opacity: isLoaded ? 1 : 0, transition: 'opacity 0.5s ease' }}
+      />
+    </div>
+  );
+}
 
 export default function App() {
   const { scrollYProgress } = useScroll();
-  const yParallax = useTransform(scrollYProgress, [0, 1], [0, -300]);
+  const yParallax = useTransform(scrollYProgress, [0, 1], [0, -150]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -105,6 +177,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-animated-gradient selection:bg-accent selection:text-black overflow-x-clip text-white">
+      {/* Navbar is NOT lazy — always renders immediately */}
       <Navbar />
 
       {/* Hero Section */}
@@ -161,13 +234,9 @@ export default function App() {
             <div className="relative z-10 floating">
               <div className="absolute -inset-6 md:-inset-20 bg-gradient-to-r from-accent to-fuchsia-900 rounded-[8rem] md:rounded-[15rem] blur opacity-15 group-hover:opacity-25 transition duration-1000"></div>
               <div className="relative bg-slate-900/80 rounded-[1.5rem] md:rounded-[2.5rem] p-0.5 border border-white/10 backdrop-blur-xl overflow-hidden shadow-2xl">
-                <video
+                <LazyVideo
                   src="/images/hero_animation.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="rounded-[1.4rem] md:rounded-[2.4rem] w-full h-auto object-cover aspect-video sm:aspect-auto"
+                  className="rounded-[1.4rem] md:rounded-[2.4rem] w-full h-auto object-cover"
                 />
               </div>
             </div>
@@ -227,6 +296,9 @@ export default function App() {
           </div>
         </motion.div>
       </section>
+
+      {/* All below-fold sections are inside ONE Suspense boundary */}
+      <Suspense fallback={<SectionSkeleton />}>
 
       <SectionDivider />
 
@@ -343,7 +415,7 @@ export default function App() {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group relative p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-accent/20 transition-all bg-white/[0.02] backdrop-blur-sm overflow-hidden"
               >
@@ -480,7 +552,7 @@ export default function App() {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1, margin: "-40px" }}
               transition={{ duration: 0.8 }}
             >
               <span className="text-accent font-bold text-sm uppercase tracking-[0.2em] mb-3 block">Get In Touch</span>
@@ -537,7 +609,7 @@ export default function App() {
             <motion.div 
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1, margin: "-40px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-white/[0.02] p-6 sm:p-8 md:p-10 rounded-3xl text-white shadow-2xl border border-white/10 backdrop-blur-md relative overflow-hidden"
             >
@@ -768,6 +840,8 @@ export default function App() {
       </motion.a>
 
       <Footer />
+
+      </Suspense>{/* End below-fold Suspense */}
     </div>
   );
 }
