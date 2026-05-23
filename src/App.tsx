@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import Navbar from "./components/Navbar";
 import TechIcon from "./components/TechIcon";
 import { TEAM_MEMBERS, SERVICES } from "./constants";
@@ -82,8 +82,6 @@ function LazyVideo({ src, className }: { src: string; className: string }) {
 }
 
 export default function App() {
-  const { scrollYProgress } = useScroll();
-  const yParallax = useTransform(scrollYProgress, [0, 1], [0, -150]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -192,12 +190,7 @@ export default function App() {
         <div className="absolute top-1/4 left-[40%] text-[5vw] font-black opacity-[0.04] select-none pointer-events-none">CSS3</div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center relative z-10 pb-6 md:pb-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="pt-2 lg:pt-0"
-          >
+          <div className="pt-2 lg:pt-0 animate-fade-in-up">
 
             <h1 className="mb-2 md:mb-3 text-white text-[22px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight glow-text">
               FROM IDEA TO IMPACT <br />
@@ -223,14 +216,9 @@ export default function App() {
               </a>
             </div>
 
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="block relative w-full max-w-[280px] sm:max-w-md lg:max-w-none mx-auto mt-2 lg:mt-0"
-          >
+          <div className="block relative w-full max-w-[280px] sm:max-w-md lg:max-w-none mx-auto mt-2 lg:mt-0 animate-fade-in-up delay-100">
             <div className="relative z-10 floating">
               <div className="absolute -inset-6 md:-inset-20 bg-gradient-to-r from-accent to-fuchsia-900 rounded-[8rem] md:rounded-[15rem] blur opacity-15 group-hover:opacity-25 transition duration-1000"></div>
               <div className="relative bg-slate-900/80 rounded-[1.5rem] md:rounded-[2.5rem] p-0.5 border border-white/10 backdrop-blur-xl overflow-hidden shadow-2xl">
@@ -258,18 +246,11 @@ export default function App() {
             </div>
 
             {/* Abstract Elements */}
-            <div className="absolute -top-10 md:-top-20 -right-10 md:-right-20 w-48 md:w-64 h-48 md:h-64 bg-accent/20 rounded-full blur-[80px] md:blur-[100px] pointer-events-none" />
-            <div className="absolute -bottom-10 md:-bottom-20 -left-10 md:-left-20 w-48 md:w-64 h-48 md:h-64 bg-fuchsia-200/20 rounded-full blur-[80px] md:blur-[100px] pointer-events-none" />
-          </motion.div>
+          </div>
         </div>
 
         {/* Infinite scrolling marquee wrapper at the bottom of Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative w-full border-y border-white/5 bg-white/[0.01] backdrop-blur-sm py-4 z-20 mt-4 mb-6 md:mb-8 overflow-hidden"
-        >
+        <div className="relative w-full border-y border-white/5 bg-white/[0.01] backdrop-blur-sm py-4 z-20 mt-4 mb-6 md:mb-8 overflow-hidden animate-fade-in-up delay-200">
           {/* Subtle glow/blur background effect behind the technologies row */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-12 bg-accent/10 rounded-full blur-[80px] pointer-events-none" />
           
@@ -294,7 +275,7 @@ export default function App() {
               })()}
             </div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* All below-fold sections are inside ONE Suspense boundary */}
