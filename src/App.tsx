@@ -24,79 +24,42 @@ const SectionSkeleton = () => (
   </div>
 );
 
-// Click-to-Play video — shows poster instantly, only loads 33MB video when clicked
-// This is the #1 performance improvement for this site
+// Auto-playing video as requested by user
 function HeroVideo({ src, poster, className }: { src: string; poster: string; className: string }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isVideoReady, setIsVideoReady] = useState(false);
-
-  const handlePlay = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    setIsPlaying(true);
-    // Only now set the src — downloads start here, not on page load
-    if (!video.src) {
-      video.src = src;
-      video.load();
-    }
-    video.play().catch(() => {});
-  };
+  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
-      {/* Poster image — loads instantly (~150KB vs 33MB video) */}
-      {!isPlaying && (
-        <div
-          className="absolute inset-0 rounded-[1.4rem] md:rounded-[2.4rem] overflow-hidden cursor-pointer group"
-          onClick={handlePlay}
-          role="button"
-          aria-label="Play video"
-        >
-          <img
-            src={poster}
-            alt="Click to play demo"
-            className="w-full h-full object-cover"
-            loading="eager"
-            decoding="async"
-          />
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />
-          {/* Play button */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-accent/90 backdrop-blur-sm flex items-center justify-center shadow-2xl shadow-accent/40 group-hover:scale-110 group-hover:bg-accent transition-all duration-300">
-              <svg className="w-7 h-7 md:w-8 md:h-8 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </div>
-          {/* Label */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/10">
-            Watch Demo
-          </div>
-        </div>
+      {/* Poster image shown while video loads */}
+      {!isLoaded && (
+        <img
+          src={poster}
+          alt="Loading video..."
+          className="absolute inset-0 w-full h-full object-cover rounded-[1.4rem] md:rounded-[2.4rem]"
+        />
       )}
-
-      {/* Video — hidden until play clicked, src only set on click */}
+      
+      {/* Auto-playing video */}
       <video
-        ref={videoRef}
+        src={src}
+        autoPlay
         loop
         muted
         playsInline
-        preload="none"
-        onCanPlay={() => setIsVideoReady(true)}
+        onCanPlay={() => setIsLoaded(true)}
         className={className}
         style={{
-          opacity: (isPlaying && isVideoReady) ? 1 : 0,
-          transition: 'opacity 0.4s ease',
-          position: isPlaying ? 'relative' : 'absolute',
+          opacity: isLoaded ? 1 : 0,
+          transition: 'opacity 0.5s ease',
+          position: isLoaded ? 'relative' : 'absolute',
           inset: 0,
         }}
       />
-      {/* Video loading spinner (between click and canPlay) */}
-      {isPlaying && !isVideoReady && (
-        <div className="absolute inset-0 rounded-[1.4rem] md:rounded-[2.4rem] flex items-center justify-center bg-slate-900">
-          <div className="w-10 h-10 rounded-full border-2 border-accent/30 border-t-accent animate-spin" />
+      
+      {/* Small loading indicator in corner while downloading */}
+      {!isLoaded && (
+        <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md rounded-full p-2">
+          <div className="w-5 h-5 rounded-full border-2 border-accent/30 border-t-accent animate-spin" />
         </div>
       )}
     </div>
