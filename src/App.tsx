@@ -2,7 +2,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import Navbar from "./components/Navbar";
 import TechIcon from "./components/TechIcon";
 import { TEAM_MEMBERS, SERVICES } from "./constants";
-import { ArrowRight, Mail, Cpu, Layers, Search, Zap, Smartphone, Users, Loader2, ExternalLink, User, Briefcase, DollarSign, PenTool, ChevronDown, Phone } from "lucide-react";
+import { ArrowRight, Mail, Cpu, Layers, Search, Zap, Smartphone, Users, Loader2, ExternalLink, User, Briefcase, DollarSign, PenTool, ChevronDown, Phone, Clock, MapPin } from "lucide-react";
 import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
 
 // Lazy load ONLY below-fold heavy components — Navbar & Hero are always immediate
@@ -562,8 +562,8 @@ export default function App() {
               <div className="space-y-5">
                 {/* Email Address */}
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
-                    <img src="/images/communication.png" alt="Email" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-accent/10 hover:border-accent/30 hover:text-accent transition-all cursor-pointer group shrink-0 text-slate-400">
+                    <Mail className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 uppercase font-black">Email Address</p>
@@ -573,8 +573,8 @@ export default function App() {
 
                 {/* Phone Number */}
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
-                    <img src="/images/phone.png" alt="Phone" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-accent/10 hover:border-accent/30 hover:text-accent transition-all cursor-pointer group shrink-0 text-slate-400">
+                    <Phone className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 uppercase font-black">Phone Number</p>
@@ -584,8 +584,8 @@ export default function App() {
 
                 {/* Working Hours */}
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
-                    <img src="/images/working-time.png" alt="Working Hours" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-accent/10 hover:border-accent/30 hover:text-accent transition-all cursor-pointer group shrink-0 text-slate-400">
+                    <Clock className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 uppercase font-black">Working Hours</p>
@@ -595,8 +595,8 @@ export default function App() {
 
                 {/* Office Address */}
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group shrink-0">
-                    <img src="/images/map.png" alt="Location" className="w-5 h-5 md:w-6 md:h-6 object-contain group-hover:scale-110 transition-transform" />
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-accent/10 hover:border-accent/30 hover:text-accent transition-all cursor-pointer group shrink-0 text-slate-400">
+                    <MapPin className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 uppercase font-black">Office Address</p>
@@ -835,7 +835,9 @@ export default function App() {
         whileTap={{ scale: 0.95 }}
         className="fixed bottom-6 right-6 md:bottom-12 md:right-12 h-14 md:h-16 px-4 md:px-6 bg-[#25D366] text-white rounded-full shadow-2xl shadow-[#25D366]/20 flex items-center justify-center gap-2 md:gap-3 z-50 hover:bg-[#20bd5a] transition-all group"
       >
-        <img src="/images/whatsapp.png" alt="WhatsApp" className="w-6 h-6 md:w-7 md:h-7 group-hover:animate-bounce object-contain" />
+        <svg className="w-6 h-6 md:w-7 md:h-7 group-hover:animate-bounce fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.26-3.774c1.666.988 3.396 1.48 5.155 1.482 5.515 0 10.002-4.485 10.005-9.998.002-2.673-1.04-5.184-2.93-7.078C16.6 2.734 14.093 1.69 11.42 1.69 5.908 1.69 1.42 6.177 1.417 11.69c-.001 1.83.499 3.618 1.447 5.19l-.995 3.637 3.733-.979zm11.236-7.859c-.3-.15-1.77-.874-2.043-.974-.274-.1-.474-.15-.674.15-.2.3-.77.974-.944 1.174-.174.2-.35.226-.65.076-1.168-.583-1.955-1.025-2.738-2.368-.2-.34.2-.315.571-1.058.075-.15.038-.282-.019-.382-.056-.1-.475-1.146-.65-1.567-.172-.412-.347-.357-.475-.362-.123-.005-.264-.006-.406-.006-.142 0-.374.053-.57.266-.197.213-.75.733-.75 1.788 0 1.054.767 2.072.873 2.213.106.142 1.51 2.305 3.659 3.23.511.22.91.352 1.22.45.513.163.98.14 1.35.084.412-.061 1.77-.723 2.02-1.388.25-.665.25-1.235.175-1.35-.075-.115-.275-.165-.575-.315z"/>
+        </svg>
         <span className="font-bold text-sm md:text-base hidden sm:block">Chat on WhatsApp</span>
       </motion.a>
 

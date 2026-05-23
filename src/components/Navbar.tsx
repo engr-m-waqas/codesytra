@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Facebook } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 flex justify-between items-center h-14 md:h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group shrink-0" onClick={() => setIsOpen(false)}>
-          <img src="/images/Gemini_Generated_Image_b2301sb2301sb230.png" alt="CodeSyntra Logo" className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-xl group-hover:scale-105 transition-transform" />
+          <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-gradient-to-tr from-accent to-fuchsia-500 p-0.5 shadow-lg shadow-accent/20 group-hover:scale-105 transition-transform shrink-0">
+            <div className="w-full h-full bg-[#020617] rounded-[10px] flex items-center justify-center">
+              <svg className="w-5 h-5 md:w-5.5 md:h-5.5 text-accent group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+          </div>
           <div className="flex flex-col leading-none">
             <span className="text-base md:text-lg font-black text-white tracking-tighter">CodeSyntra</span>
             <span className="text-[8px] md:text-[9px] font-bold text-accent uppercase tracking-widest">Agency</span>
@@ -91,11 +98,11 @@ export default function Navbar() {
             codesyntraa@gmail.com
           </a>
           <div className="flex justify-center gap-3">
-            <a href="https://github.com/engr-m-waqas" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all">
-              <img src="/images/github.png" alt="GitHub" className="w-4 h-4 opacity-70 hover:opacity-100" />
+            <a href="https://github.com/engr-m-waqas" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all text-slate-400 hover:text-white" aria-label="GitHub">
+              <Github size={16} />
             </a>
-            <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all">
-              <img src="/images/facebook.png" alt="Facebook" className="w-4 h-4 opacity-70 hover:opacity-100" />
+            <a href="https://web.facebook.com/profile.php?id=61590206671999" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all text-slate-400 hover:text-white" aria-label="Facebook">
+              <Facebook size={16} />
             </a>
           </div>
         </div>

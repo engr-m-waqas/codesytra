@@ -28,7 +28,7 @@ export default function TeamMember({ name, role, exp, avatar, avatarImg, desc, s
               className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-xl md:rounded-2xl overflow-hidden shadow-lg group-hover:rotate-2 transition-transform border-2 border-white/10"
               style={{ backgroundColor: themeColor }}
             >
-              <img src={avatarImg} alt={name} className="w-full h-full object-cover" />
+              <img src={avatarImg} alt={name} className="w-full h-full object-cover" loading="lazy" />
             </div>
           ) : (
             <div
