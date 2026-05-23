@@ -30,13 +30,12 @@ export default defineConfig(({mode}) => {
       target: 'es2020',
       // Minify with esbuild (fast) for JS
       minify: 'esbuild',
-      // Split vendor chunks for better browser caching
       rollupOptions: {
         output: {
-          manualChunks: {
-            'react-vendor':  ['react', 'react-dom'],
-            'motion-vendor': ['motion'],
-            'lucide-vendor': ['lucide-react'],
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
           },
         },
         // Remove unused code
